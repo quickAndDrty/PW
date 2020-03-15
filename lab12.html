@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+</head>
+<body>
+<h1>This is a Bookstore</h1> <a> <img src="https://clipartart.com/images/a-lot-of-books-clipart-6.png" width=100 height=100 alt="logo"></a>
+<div>
+
+    <form style="margin-left: 10%;margin-right: 40%;align-items: center;background-color: #87C0FF" action="submit">
+        <fieldset style="border:2px solid blue;">
+            <legend >  <h1>Form</h1></legend>
+
+            <div >
+                <table  style="width: 100%" >
+                    <tr>
+                        <td colspan="3"><h3>Informații actuale </h3></td>
+                    </tr>
+                    <tr >
+                        <td style="width: 100%"  >
+                            Prenume:
+                            <input type="text" name="prenume"  >
+                        </td>
+                        <td  >
+                            Nume:
+                        </td>
+                        <td>
+                            <input type="text" name="nume">
+
+                        </td>
+                    </tr>
+
+                    <tr >
+                        <td style="width: 100%"  >
+                            Oraș:
+                            <input type="text" name="oras"  >
+                        </td>
+                        <td  >
+                            Județ:
+                        </td>
+                        <td>
+                            <input type="text" name="judet">
+
+                        </td>
+                    </tr>
+                    <tr >
+                        <td style="width: 100%"  >
+                            Adresă:
+                            <input type="text" name="adresa"  >
+                        </td>
+                    </tr>
+                    <tr >
+                        <td style="width: 100%"  >
+                            CNP:
+                            <input type="text" name="CNP"  >
+                        </td>
+                    </tr>
+                    <tr >
+                        <td style="width: 100%"  >
+                            Telefon:
+                            <input type="text" name="telefon"  >
+                        </td>
+                    </tr>
+                    <tr >
+                        <td style="width: 100%"  >
+                            E-mail:
+                            <input type="text" name="email"  >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 100%">
+                            Sex: <br>
+                            <input type="radio" name="gender" value="male" checked> Femeie<br>
+                            <input type="radio" name="gender" value="female"> Bărbat<br>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <h3>Current books</h3>
+
+            <table style="width:100%" >
+                <tr>
+                    <th>Nr</th>
+                    <th>Autor</th>
+                    <th>Titlu</th>
+                    <th>Cantitate</th>
+                </tr>
+                <tr>
+                    <td> 1</td>
+                    <td><input type="text" name="autor" ></td>
+                    <td><input type="text" name="titlu" ></td>
+                    <td><input type="text" name="cantitate" ></td>
+                </tr>
+                <tr>
+                    <td> 2</td>
+                    <td><input type="text" name="autor" ></td>
+                    <td><input type="text" name="titlu" ></td>
+                    <td><input type="text" name="cantitate" ></td>
+                </tr>
+                <tr>
+                    <td> 3</td>
+                    <td><input type="text" name="autor" ></td>
+                    <td><input type="text" name="titlu" ></td>
+                    <td><input type="text" name="cantitate" ></td>
+                </tr>
+                <tr>
+                    <td> 4</td>
+                    <td><input type="text" name="autor" ></td>
+                    <td><input type="text" name="titlu" ></td>
+                    <td><input type="text" name="cantitate" ></td>
+                </tr>
+            </table>
+
+            <table  style="width: 100%" >
+                <tr>
+                    <td ><h3>Genuri preferate </h3></td>
+
+                    <td>
+                        <select name="gen" multiple>
+                            <option value="d" selected>Dramă</option>
+                            <option value="j">Jurnal</option>
+                            <option value="p" >Polițist</option>
+                            <option value="s">Science-Fiction</option>
+                            <option value="f">Fantasy</option>
+                        </select>
+                    </td>
+
+                </tr>
+
+                <tr >
+                    <td style="width: 30%"  >
+                        <h3> Limbi preferate </h3>
+                    </td>
+                    <td  >
+                        <ol   >
+                            <li>
+                                <input type="radio" name="e"> engleză <br>
+                            </li>
+                            <li>
+                                <input type="radio" name="r"> romană <br>
+                            </li>
+                            <li>
+                                <input type="radio" name="f"> franceză <br>
+                            </li>
+                        </ol>
+
+                    </td>
+                </tr>
+                <tr >
+                    <td style="width: 30%"  >
+                        <h3> Preț </h3>
+                    </td>
+                    <td  >
+                        <ol   type="I" start="1" >
+                            <li>
+                                <input type="radio" name="e"> mai mic de 50 lei <br>
+                            </li>
+                            <li>
+                                <input type="radio" name="r"> intre 50 si 100 lei <br>
+                            </li>
+                            <li>
+                                <input type="radio" name="f"> peste 100 lei <br>
+                            </li>
+                        </ol>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Sugestii
+                        <textarea rows="4" cols="50">
+					</textarea> <br>
+                        <input type="text" name="t" value="Anonim" readonly><br>
+                    </td>
+                </tr>
+
+            </table>
+
+
+            <table>
+                <tr >
+                    <td rowspan="2" style="width: 100%">
+                        De obicei cumpăr carți pentru:<br>
+                        <ul >
+                            <li>
+                                <input type="radio" name="cu"> Pentru mine <br>
+                            </li>
+                            <li>
+                                <input type="radio" name="cu"> Pentru familie <br>
+                            </li>
+                            <li>
+                                <input type="radio" name="cu"> Pentru a le face cadou <br>
+                            </li>
+                        </ul>
+                    </td>
+                    <td style="align-content: center;width: 100%" >
+                        Doresc livrarea la:
+                        <select name="locatie">
+                            <option value="domiciliu">Domiciliu</option>
+                            <option value="l">Loc de muncă</option>
+                            <option value="a">Domiciliul altei pers</option>
+                            <option value="al">altul</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 60%">
+                        Vreau sa primesc notificări:<br>
+                        <input type="radio" name="notif" value="da" checked> Da<br>
+                        <input type="radio" name="notif" value="nu"> Nu<br>
+                        <input type="radio" name="notif" value="other"> Nu știu
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <th>
+                                    Adresa de livrare
+                                </th>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    Strada
+                                    <input style="width: 40%" type="text" name="strada" >
+                                </td>
+                                <td>
+                                    Nr
+                                    <input type="text" name="nr" >
+                                </td>
+                            </tr>
+                            <tr>
+
+                                <td>
+                                    Et.
+                                    <input type="text" name="et" >
+                                </td>
+                                <td>
+                                    Sc.
+                                    <input type="text" name="sc" >
+                                </td>
+                                <td>
+                                    Ap.
+                                    <input type="text" name="ap" maxlength="10">
+                                </td>
+
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+            </table>
+            <table>
+
+                <tr>
+                    <td>
+                        Telefon mobil pt livrare:
+                        <input type="text" name="telefon" disabled>
+                    </td>
+                    <td >
+                        Doresc să donez 2%
+                        <input type="checkbox" name="wt" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="https://carturesti.ro">Descoperă mai multe!</a>
+                    </td>
+
+                </tr>
+
+            </table>
+
+           <input type="button" name="Send" value="  Send  ">
+
+        </fieldset>
+
+    </form>
+</div>
+
+</body>
+</html>
