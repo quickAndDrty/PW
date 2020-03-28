@@ -1,0 +1,53 @@
+
+
+header {
+
+    margin-top: 0;
+    width: 100%;
+    background-color: cornflowerblue;
+    color: deeppink;
+    text-align: left;
+    padding: 20px;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: left;
+    padding: 15px;
+}
+
+div{
+    position: fixed;
+    margin-left:10%; /* Same as the width of ul */
+    width:100%;
+    padding:1px 16px;
+    height: 800px;
+    background-color: green;
+    overflow: auto;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 10%;
+    background-color: #333;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
