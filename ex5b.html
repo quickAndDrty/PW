@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<style type="text/css">
+
+    div.gallery {
+        margin: 5px;
+        border: 5px solid black;
+        width: 800px;
+        background-color: white;
+
+    }
+    ul{
+        list-style-type:none;
+        overflow: auto;
+    }
+
+    #dimensions {
+        max-width: 200px;
+        maix-height: 80px;
+    }
+    #box1 {
+        max-width: 300px;
+        max-height: 200px;
+        padding: 5px;
+        padding-left: 20px;
+        margin: 2px;
+        background-color: cornflowerblue;
+
+    }
+    #box2 {
+        max-width: 300px;
+        max-height: 200px;
+        padding: 5px;
+        padding-right: 120px;
+        margin: 2px;
+        background-color: cornflowerblue;
+        float: right;
+
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div class="gallery">
+    <ul>
+        <li id="box1"><img id="dimensions"  src="london.jpg" > <p> London</p> </li>
+        <li id="box2" ><img id="dimensions" src="Eiffel.jpg" > <p> Paris</p></li>
+        <li id="box1"><img id="dimensions" src="Amsterdam.jpg" > <p> Amsterdam </p> </li>
+        <li id="box2"><img id="dimensions" src="zurich.jpg" > <p> Zurich</p></li>
+    </ul>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<style type="text/css">
+    .input {
+        width: calc(20 * (1ch + 1px) - 1px); /*fiecare litera*/
+        border: 2px solid black;
+        box-sizing: border-box;
+        background: repeating-linear-gradient(to right, #fff, #fff 1ch, #000 1ch, #000 calc(1ch + 1px));
+        font-size: 29px;
+        letter-spacing: 1px;
+        /*we use a monospace font-family so all the letter will take the same width = 1ch*/
+        font-family: monospace;
+    }
+    .inputCnp{
+        width: calc(13 * (1ch + 1px) - 1px); /*fiecare litera*/
+        border: 2px solid black;
+        box-sizing: border-box;
+        background: repeating-linear-gradient(to right, #fff, #fff 1ch, #000 1ch, #000 calc(1ch + 1px));
+        font-size: 29px;
+        letter-spacing: 1px;
+        /*we use a monospace font-family so all the letter will take the same width = 1ch*/
+        font-family: monospace;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p> NUME</p>
+<input class="input" type="text" maxlength="20">
+<p> PRENUME</p>
+<input class="input" type="text" maxlength="20">
+<p> CNP</p>
+<input class="inputCnp" type="text" maxlength="13">
+
+
+</body>
+</html>
