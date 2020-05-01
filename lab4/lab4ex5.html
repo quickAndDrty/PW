@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+    td{
+        padding: 20px;
+        text-align: center;
+        background-color: green;
+        font-size: 40px;
+        width: 50px;
+    }
+</style>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>ex 5</title>
+    <script>
+
+        var cellRow = 2;
+        var cellColumn =2;
+        var cells =  $("#myTable tr td");
+        var cellsNumber = $('#myTable tr td').length/($("#myTable tr").length);
+        document.onkeydown = checkKey;
+        function checkKey(e) {
+
+            if (e.keyCode === '38') {
+                // up arrow
+                if(cellRow<$("#myTable tr").length-1){
+                    var aux = cells[cellRow*cellsNumber + cellColumn].innerHTML;
+                    cells[cellRow*cellsNumber + cellColumn].innerHTML =  cells[(cellRow+1)*cellsNumber + cellColumn].innerHTML;
+                    cells[(cellRow+1)*cellsNumber + cellColumn].innerHTML = aux;
+                    cellRow = cellRow +1;
+                }
+            }
+            else if (e.keyCode == '40') {
+                // down arrow
+
+                if(cellRow>0){
+                    var aux = cells[cellRow*cellsNumber + cellColumn].innerHTML;
+                    cells[cellRow*cellsNumber + cellColumn].innerHTML =  cells[(cellRow-1)*cellsNumber + cellColumn].innerHTML;
+                    cells[(cellRow-1)*cellsNumber + cellColumn].innerHTML = aux;
+                    cellRow = cellRow -1;
+
+                }
+            }
+            else if (e.keyCode == '37') {
+                // left arrow
+                if(cellColumn<cellsNumber-1){
+                    var aux = cells[cellRow*cellsNumber + cellColumn].innerHTML;
+                    cells[cellRow*cellsNumber + cellColumn].innerHTML =  cells[cellRow*cellsNumber + cellColumn+1].innerHTML;
+                    cells[cellRow*cellsNumber + cellColumn+1].innerHTML = aux;
+                    cellColumn = cellColumn +1;
+
+
+                }
+            }
+            else if (e.keyCode == '39') {
+                // right arrow
+
+                if(cellColumn>0){
+                    var aux = cells[cellRow*cellsNumber + cellColumn].innerHTML;
+                    cells[cellRow*cellsNumber + cellColumn].innerHTML =  cells[cellRow*cellsNumber + cellColumn-1].innerHTML;
+                    cells[cellRow*cellsNumber + cellColumn-1].innerHTML = aux;
+                    cellColumn = cellColumn -1;
+                }
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+<table id="myTable" >
+    <tr>
+        <td>
+            6
+        </td>
+        <td>
+            3
+        </td>
+        <td>
+            7
+        </td>
+        <td>
+            11
+        </td>
+    </tr>
+    <tr>
+        <td>
+            2
+        </td>
+        <td>
+            15
+        </td>
+        <td>
+            8
+        </td>
+        <td>
+            12
+        </td>
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            5
+        </td>
+        <td>
+
+        </td>
+        <td>
+            9
+        </td>
+    </tr>
+    <tr>
+        <td>
+            4
+        </td>
+        <td>
+            10
+        </td>
+        <td>
+            13
+        </td>
+        <td>
+            14
+        </td>
+    </tr>
+</table>
+
+
+</body>
+</html>

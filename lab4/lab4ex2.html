@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+
+        function validateForm()
+        {
+            msg = ""
+            var nume = $("#nume").val();
+            if (nume =="")
+            {
+                $("#nume").css('border', '2px solid red');
+                msg = msg.concat("numele trebuie completat\n");
+            }
+            else{
+                $("#nume").css('border', '')
+            }
+
+            var data = $("#data").val();
+            if (data =="")
+            {
+                $("#data").css('border', '2px solid red');
+                msg = msg.concat("data trebuie completata\n");
+            }
+            else{
+                $("#data").css('border', '')
+            }
+
+            var varsta = $("#varsta").val();
+            if (varsta =="")
+            {
+                $("#varsta").css('border', '2px solid red');
+                msg = msg.concat("varsta trebuie completata\n");
+            }
+            else {
+                if (isNaN(Number(varsta)) )
+                {
+                    msg = msg.concat("varsta invalida\n");
+                    $("#varsta").css('border', '2px solid red');
+                }
+                else{
+                    $("#varsta").css('border', '')
+                }
+            }
+
+
+            var mail = $("#mail").val();
+            if (mail =="")
+            {
+                $("#mail").css('border', '2px solid red');
+                msg = msg.concat("emailul trebuie completat\n");
+            }
+            else
+            {
+                if(mail.includes("@") == false)
+                {
+                    $("#mail").css('border', '2px solid red');
+                    msg = msg.concat("email gresit\n");
+                }
+                else{
+                    $("#mail").css('border', '')
+                }
+            }
+
+            if(msg!=""){
+                alert(msg)
+                return false;
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+<form name="myForm"  onsubmit="return validateForm()" method="post">
+    Nume: <input  type="text" name="nume" id="nume"><br>
+    Data nasterii: <input type="date" name="data" id="data"><br>
+    Varsta: <input type="text" name="varsta" id="varsta"><br>
+    Email: <input type="text" name="mail" id="mail"><br>
+    <br>
+    <input type="submit" value="trimite">
+</form>
+</body>
+</html>

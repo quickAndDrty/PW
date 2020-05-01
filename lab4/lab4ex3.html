@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+    td {
+        background: cornflowerblue;
+        border: black 1px solid;
+        width: 150px;
+        height: 150px;
+        padding: 20px;
+        margin: 1px auto;
+    }
+</style>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>ex3</title>
+    <script>
+        function myFunction(){
+            if (!document.getElementsByTagName || !document.createTextNode) return;
+            var rows = $('#myTable tr td');
+            var rowCount = $('#myTable tr td').length;
+            for (var i = 0; i < rowCount; i++) {
+                var cel = rows[i];
+                cel.onclick = function function_name() {
+                    var img = document.createElement('img');
+                    var src1 = 'img/img'+this.className+'\.jpeg';
+                    img.src = src1;
+                    this.innerHTML = "";
+                    this.appendChild(img);
+                    var el =this;
+                    var el1 = last;
+                    if ( nr === 0){
+                        nr = 1;
+                        last = this;
+                    }
+                    else{
+
+                        if (this.className === last.className){
+
+                        }
+                        else{
+                            setTimeout(function(){
+                                var img = document.createElement('img');
+                                img.src = "img/card.png";
+                                el.innerHTML = "";
+                                el.appendChild(img);
+
+                                var img1 = document.createElement('img');
+                                img1.src = "img/card.png";
+                                last.innerHTML = "";
+                                last.appendChild(img1);
+
+                            }, 200);
+
+                        }
+                        nr = 0;
+                    }
+                }
+
+
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+<div class="container">
+
+    <table id="myTable" onclick="myFunction()">
+        <tr>
+            <td class="1"  >
+                <img id="img1"src="img/card.png" >
+            </td>
+            <td class="2" >
+                <img id="img1"src="img/card.png" >
+            </td>
+            <td class="1">
+                <img id="img1"src="img/card.png" >
+            </td>
+            <td class="2">
+                <img id="img1"src="img/card.png" >
+            </td>
+        </tr>
+        <tr>
+            <td  class="3">
+                <img id="img1"src="img/card.png" >
+            </td>
+            <td  class="4">
+                <img id="img1"src="img/card.png" >
+            </td>
+            <td  class="3">
+                <img id="img1"src="img/card.png" >
+            </td>
+            <td  class="4">
+                <img id="img1"src="img/card.png" >
+            </td>
+        </tr>
+        <tr>
+            <td  class="5">
+                <img id="img1"src="img/card.png" >
+            </td>
+            <td  class="6">
+                <img id="img1"src="img/card.png" >
+            </td>
+            <td  class="5">
+                <img id="img1"src="img/card.png" >
+            </td>
+            <td  class="6">
+                <img id="img1"src="img/card.png" >
+            </td>
+        </tr>
+        <tr>
+            <td  class="7">
+                <img id="img1"src="img/card.png" >
+            </td>
+            <td  class="8">
+                <img id="img1"src="img/card.png" >
+            </td>
+            <td  class="7">
+                <img id="img1"src="img/card.png" >
+            </td>
+            <td  class="8">
+                <img id="img1"src="img/card.png" >
+            </td>
+        </tr>
+    </table>
+
+
+    <script src="ex3Script.js"></script>
+</body>
+</html>

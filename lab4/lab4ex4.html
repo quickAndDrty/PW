@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+    table { border-spacing:0 }
+    td{
+        padding: 10px;
+        border-top: 2px solid black;
+        margin: 0;
+    }
+
+</style>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>ex4</title>
+    <script>
+        function sort(index){
+            var table = $("#myTable")
+            var cellsNumber = $('#myTable tr td').length/($("#myTable tr").length);
+            var cells =  $("#myTable tr td");
+            var rowsNumber = $("#myTable tr").length;
+            var indexNum = Number(index);
+
+            for (var i = 1; i < cellsNumber; i++) {
+                for (var j = i+1; j < cellsNumber; j++) {
+                    var el1 =cells[cellsNumber*indexNum+i].innerHTML;
+                    var el2 =cells[cellsNumber*indexNum+j].innerHTML;
+                    if( ! isNaN(Number(el1)) && !isNaN(Number(el2)) ){
+                        el1= Number(el1);
+                        el2=Number(el2);
+                    }
+                    if(el1>el2){
+                        for(var k = 0;k<rowsNumber;k++){
+                            var aux =  cells[cellsNumber*k+i].innerHTML;
+                            cells[cellsNumber*k+i].innerHTML = cells[cellsNumber*k+j].innerHTML;
+                            cells[cellsNumber*k+j].innerHTML = aux;
+                        }
+
+                    }
+
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<table id="myTable">
+    <tr>
+        <td onclick="sort('0')">
+            Fructe
+        </td>
+        <td>
+            Mere
+        </td>
+        <td>
+            Pere
+        </td>
+        <td>
+            Afine
+        </td>
+        <td>
+            Banane
+        </td>
+    </tr>
+    <tr>
+        <td onclick="sort('1')">
+            Cantitate
+        </td>
+        <td>
+            8
+        </td>
+        <td>
+            12
+        </td>
+        <td>
+            4
+        </td>
+        <td>
+            1
+        </td>
+    </tr>
+    <tr>
+        <td onclick="sort('2')">
+            Pret
+        </td>
+        <td>
+            10
+        </td>
+        <td>
+            121
+        </td>
+        <td>
+            80
+        </td>
+        <td>
+            60
+        </td>
+    </tr>
+</table>
+<script src="ex4Script.js"></script>
+
+</body>
+</html>
